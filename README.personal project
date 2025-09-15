@@ -1,0 +1,72 @@
+# AI-Powered Loan Default Predictor
+
+## 📌 Project Overview
+This project predicts whether a borrower will default on a loan based on financial behavior.  
+The target variable is **loan_status** (1 = Default, 0 = No Default).  
+
+We applied classification models (Logistic Regression, Random Forest, and XGBoost), compared their performance, and identified the most effective approach.
+
+---
+
+## 📊 Dataset
+- **Source**: Nigerian Loan Default Dataset (synthetic/real as provided).
+- **Rows**: [100000]
+- **Features**: Demographics, financial behavior, loan details.
+- **Target**: `loan_status` (binary: 0 = repaid, 1 = defaulted).
+
+---
+
+## ⚙️ Tech Stack
+- Python 3.9+
+- pandas, numpy
+- scikit-learn
+- xgboost
+- matplotlib, seaborn
+
+---
+
+## 🚀 Workflow
+1. Exploratory Data Analysis (EDA)  
+   - Missing values handled  
+   - Distribution analysis  
+   - Class balance visualization  
+
+2. Preprocessing  
+   - Median imputation (numerical), most frequent (categorical)  
+   - One-hot encoding for categoricals  
+   - Feature scaling  
+
+3. Modeling  
+   - Logistic Regression (liblinear)  
+   - Random Forest  
+   - XGBoost  
+
+4. Evaluation  
+   - Metrics: Accuracy, Precision, Recall, F1, ROC-AUC  
+   - Confusion Matrices  
+   - ROC Curves  
+
+---
+
+## 📈 Results
+| Model               | Accuracy | Precision | Recall | F1 | ROC-AUC |
+|----------------------|----------|-----------|--------|------|---------|
+| Logistic Regression  | 0.867    | 0.367     | 0.004  | 0.008| 0.701   |
+| Random Forest        | 0.868    | 0.476     | 0.004  | 0.008| 0.685   |
+| XGBoost              | 0.866    | 0.394     | 0.030  | 0.056| 0.694   |
+
+✅ Best model: **XGBoost** (highest ROC-AUC and balanced performance).
+
+---
+
+## 🔮 Next Steps
+- Hyperparameter tuning (GridSearch, RandomSearch, Optuna).  
+- Feature engineering (credit utilization ratio, income-to-loan ratio).  
+- Deploy via FastAPI/Flask.  
+- Build dashboard in Streamlit/PowerBI/Tableau.  
+
+---
+
+## 📚 Citations
+- Dataset: [*****]  
+- Libraries: scikit-learn, xgboost, pandas, seaborn 
